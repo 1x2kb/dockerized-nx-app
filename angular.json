@@ -210,6 +210,27 @@
           }
         }
       }
+    },
+    "quote-api": {
+      "root": "libs/quote-api",
+      "sourceRoot": "libs/quote-api/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/quote-api/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/quote-api"],
+          "options": {
+            "jestConfig": "libs/quote-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
