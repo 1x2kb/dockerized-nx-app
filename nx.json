@@ -28,6 +28,7 @@
     },
     "api": { "tags": [] },
     "api-interfaces": { "tags": [] },
-    "quote-api": { "tags": [] }
+    "quote-api": { "tags": [] },
+    "quote-client": { "tags": [] }
   }
 }

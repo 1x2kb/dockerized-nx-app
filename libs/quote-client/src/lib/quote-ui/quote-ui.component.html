@@ -1,0 +1,5 @@
+<h2>Quote of the Day</h2>
+<div *ngIf="quote$ | async as quote">
+  <p>Author: {{ quote.author }}</p>
+  <p>Quote: {{ quote.quote }}</p>
+</div>

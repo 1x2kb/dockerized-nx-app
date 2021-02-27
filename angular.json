@@ -231,6 +231,31 @@
           }
         }
       }
+    },
+    "quote-client": {
+      "projectType": "library",
+      "root": "libs/quote-client",
+      "sourceRoot": "libs/quote-client/src",
+      "prefix": "dockerized-test",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/quote-client/src/**/*.ts",
+              "libs/quote-client/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/quote-client"],
+          "options": {
+            "jestConfig": "libs/quote-client/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

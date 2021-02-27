@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@dockerized-test/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@dockerized-test/quote-api": ["libs/quote-api/src/index.ts"]
+      "@dockerized-test/quote-api": ["libs/quote-api/src/index.ts"],
+      "@dockerized-test/quote-client": ["libs/quote-client/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
