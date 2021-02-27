@@ -8,7 +8,7 @@ export class QuoteApiController {
   constructor(private quoteApiService: QuoteApiService) {}
 
   @Get('qod')
-  @Header('Access-Controll-Allow-Origin', 'http://localhost:4200')
+  @Header('Access-Control-Allow-Origin', 'http://localhost:4200')
   quoteOfTheDay(): Observable<Quote> {
     return this.quoteApiService.quoteOfDay();
   }

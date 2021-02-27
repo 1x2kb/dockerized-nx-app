@@ -1,7 +1,7 @@
 import { HttpService, Injectable } from '@nestjs/common';
 import { Quote } from './quote.type';
-import { Observable } from 'rxjs';
-import { map, pluck, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map, pluck, tap } from 'rxjs/operators';
 
 @Injectable()
 export class QuoteApiService {
@@ -22,6 +22,9 @@ export class QuoteApiService {
           author: quoteOfDayResponse.author,
         };
       }),
+      catchError(error => {
+        return of(null);
+      })
     );
   }
 }

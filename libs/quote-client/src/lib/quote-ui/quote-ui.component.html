@@ -1,5 +1,12 @@
-<h2>Quote of the Day</h2>
-<div *ngIf="quote$ | async as quote">
+<div *ngIf="quote$ | async as quote; else quoteError">
+  <h2>Quote of the Day</h2>
   <p>Author: {{ quote.author }}</p>
   <p>Quote: {{ quote.quote }}</p>
 </div>
+
+<ng-template #quoteError>
+  <div>
+    <h2>Quote of the Day</h2>
+    <p class="error">Error occured attempting to retrieve quote of the day.</p>
+  </div>
+</ng-template>

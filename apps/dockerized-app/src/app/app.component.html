@@ -5,6 +5,10 @@
     src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
   />
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+<div *ngIf="hello$ | async as hello">
+  <h2>Message From Api</h2>
+  <label for="message-from-api">Message: </label>
+  <span id="message-from-api">{{ hello.message }}</span>
+</div>
 
 <dockerized-test-quote-ui></dockerized-test-quote-ui>

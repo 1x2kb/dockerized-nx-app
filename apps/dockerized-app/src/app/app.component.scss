@@ -44,12 +44,6 @@ h1 {
   font-size: 24px;
 }
 
-h2 {
-  text-align: center;
-  font-size: 20px;
-  margin: 40px 0 10px 0;
-}
-
 .resources {
   text-align: center;
   list-style: none;
@@ -130,4 +124,8 @@ summary {
   height: 16px;
   width: 16px;
   margin-right: 4px;
+}
+
+.start {
+  text-align: start;
 }
